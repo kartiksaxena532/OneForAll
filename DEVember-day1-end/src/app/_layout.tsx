@@ -7,6 +7,7 @@ import {
 } from '@expo-google-fonts/amatic-sc';
 
 import * as SplashScreen from 'expo-splash-screen';
+import { setStatusBarHidden } from 'expo-status-bar';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -28,8 +29,8 @@ export default function RootLayout() {
   }
 
   return (
-    <Stack screenOptions={{}}>
-      <Stack.Screen name="index" options={{ title: 'Kartik React Native Practice' }} />
+    <Stack screenOptions={{headerStyle:'hidden',}}>
+      <Stack.Screen name="index" options={{ title: 'Kartik React Native Practice'}} />
     </Stack>
   );
 }
