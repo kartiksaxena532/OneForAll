@@ -29,7 +29,7 @@ export default function RootLayout() {
   }
 
   return (
-    <Stack screenOptions={{headerStyle:'hidden',}}>
+    <Stack screenOptions={{}}>
       <Stack.Screen name="index" options={{ title: 'Kartik React Native Practice'}} />
     </Stack>
   );

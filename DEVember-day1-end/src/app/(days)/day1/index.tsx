@@ -14,7 +14,7 @@ const DayDetailsScreen = () => {
       </Text>
       <Text  style={{ fontFamily: 'Inter', fontSize: 30,paddingLeft:10, }}>So,</Text> 
       <Text style={{ textAlign : 'left', fontSize: 15,paddingLeft:10,lineHeight:30}}>Try it out yourself where you can click each numbered box and experience skills and feel the imposter syndrome
-         that would haunt you everyday after using this app ,              Thank me later if you feel insominiatic and hallucinated😎 </Text>
+         that would haunt you everyday after using this app ,Thank me later if you feel insominiatic and hallucinated😎 </Text>
     </SafeAreaView>
   );
 };
