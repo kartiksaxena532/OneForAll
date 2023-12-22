@@ -8,7 +8,7 @@ const DayDetailsScreen = () => {
       <Text>Day Details Screen</Text>
       <Link href="/day2/onboarding" asChild>
       <Button title="Go to landing"/>
-      </Link>
+      </Link>  
     </View>
   );
 };
