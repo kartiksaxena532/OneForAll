@@ -4,6 +4,8 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { AntDesign } from '@expo/vector-icons';
 
+const onboardingSteps = 
+
 
 export default function OnboardingScreen(){
 
