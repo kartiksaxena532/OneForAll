@@ -4,7 +4,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { AntDesign } from '@expo/vector-icons';
 
-const onboardingSteps = 
+
 
 
 export default function OnboardingScreen(){
@@ -20,6 +20,9 @@ return (
 </View>
 
 <View style={styles.buttonRow}>
+    <TouchableOpacity>
+    <Text style={styles.buttonText}>Skip</Text>
+    </TouchableOpacity>
     <Link href="/day2/onboarding2">
     <TouchableOpacity style={styles.button}>
     <AntDesign name="arrowright" size={24} color="white" />
@@ -28,7 +31,6 @@ return (
     </Link>
 </View>
 </SafeAreaView>
-
 
 )
 
@@ -64,23 +66,28 @@ const styles = StyleSheet.create({
 
     },
     buttonText:{
-        fontSize:30,
+        fontSize:15,
         color:'#FDFDFD',
         fontFamily:'Inter',
+        marginTop:20
 
     },
     button:{
         backgroundColor:"#302E38",
         padding:15 ,
         borderRadius:15,
-        width:375,
+        width:250,
         alignItems:"center",
-        marginTop:22,
-        
-
+        marginTop:19,
+        flex:1,
+        gap:20,
     },
     buttonRow:{
-        flexDirection:"row-reverse",
+        flexDirection:"row",
+        alignItems:"center",
+        justifyContent:"flex-start"
+
+
     },
     
 
