@@ -4,8 +4,24 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { AntDesign } from '@expo/vector-icons';
 
+const onboardingOptions=[{
+title:"Gamer",
+image:"",
+description:"Ready Player One ! Just a slang to be ready to play Spiderman 2 and Wolverine on this PC probably by end of my life.",
 
-
+},
+{
+    title:"Developer",
+    image:"",
+    description:"Learning React Native by building 24 in apps project to build up my resume everyday",
+    
+    },
+    {
+        title:"Ordinary Person",
+        image:"",
+        description:"Running through anime content such as My Hero Academia were the power One For All is beared by Iszuku Midoriya. So as the name of this github repo",
+        
+        },];
 
 export default function OnboardingScreen(){
 
@@ -66,28 +82,28 @@ const styles = StyleSheet.create({
 
     },
     buttonText:{
-        fontSize:15,
+        fontSize:20,
         color:'#FDFDFD',
-        fontFamily:'Inter',
+        fontFamily:'InterSemi',
         marginTop:20
 
     },
     button:{
         backgroundColor:"#302E38",
         padding:15 ,
-        borderRadius:15,
-        width:250,
+        borderRadius:30,
+        width:300,
         alignItems:"center",
         marginTop:19,
         flex:1,
-        gap:20,
+        
     },
     buttonRow:{
         flexDirection:"row",
         alignItems:"center",
-        justifyContent:"flex-start"
-
-
+        justifyContent:"flex-start",
+        gap:27,
+        marginTop:20
     },
     
 
