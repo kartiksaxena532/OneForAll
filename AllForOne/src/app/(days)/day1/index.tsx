@@ -1,10 +1,11 @@
 // ReadmeScreen.js
 import React from 'react';
 import { View, Text, ScrollView, StyleSheet, Image } from 'react-native';
-
+import { Stack } from 'expo-router';
 const ReadmeScreen = () => {
   return (
     <ScrollView style={styles.container}>
+       <Stack.Screen options={{headerShown : false}}/>
       <View style={styles.header}>
         <Image
           source={require('../day2/images2/ok.png')} // Replace with your app logo
