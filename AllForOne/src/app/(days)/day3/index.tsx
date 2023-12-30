@@ -1,10 +1,12 @@
 import React, { useRef, useEffect } from 'react';
-import { Text,Button, StyleSheet, View } from 'react-native';
+import { Text,Button, StyleSheet, View,StyleProp } from 'react-native';
 import LottieView from 'lottie-react-native';
-import { Stack } from 'expo-router';
+import { Stack ,Link} from 'expo-router';
+import { Directions } from 'react-native-gesture-handler';
+
 
 export default function App() {
-  const animation = useRef(null);
+  const animation = useRef<LottieView>(null);
   useEffect(() => {
     // You can control the ref programmatically, rather than using autoPlay
     // animation.current?.play();
@@ -14,26 +16,38 @@ export default function App() {
     <View style={styles.animationContainer}>
         <Stack.Screen options={{headerShown : false}}/>
       <LottieView
-        autoPlay
         ref={animation}
         style={{
           width: 400,
           height: 400,
-          backgroundColor: 'grey',
+      
           borderRadius: 400,
         }}
         // Find more Lottie files at https://lottiefiles.com/featured
         source={require('./assets/Animation - 1703835671229.json')}
       />
+      
+      <View style={styles.animation}>
+<Button style={styles.animationButton}title="Play" onPress={()=>animation.current?.play()}/>
+<Button  title="Pause" onPress={()=>animation.current?.pause()}/>
+<Button  title="Reset" onPress={()=>animation.current?.reset()}/>
+</View>
+
       <Text style={styles.title}>Hola Amigo!
       </Text>
       <Text style={styles.title1}>Kaise ho theek ho?
       </Text>
+      <Link href="/day3/splash" asChild>
+      <Button style={{marginTop:20}}title='Go to Splash Screen'/>
+      </Link>
     </View>
+
+
   );
 }
 
 const styles = StyleSheet.create({
+
   animationContainer: {
     backgroundColor: 'white',
     alignItems: 'center',
@@ -54,5 +68,13 @@ const styles = StyleSheet.create({
     fontWeight: 'semibold',
     marginTop: 5,
     color: 'black',
+  },
+  animation:{
+    flexDirection: "row",
+    gap:50,
+  },
+  animationButton:{
+    borderRadius:100,
+    backgroundColor:'orange',
   }
 });
